@@ -1,16 +1,16 @@
-import java.util.ArrayList;
+package model;
 public class Account {
-    private long accountNumber;
+    private final long accountNumber;
     private String accountName;
     private double balance;
-    private int pin;
-    private  ArrayList<Transaction> transactions;
-     public Account(long accountNumber, String accountName, double balance,int pin) {
+    private final int pin;
+    //private  ArrayList<Transaction> transactions;
+     public Account(long accountNumber, String accountName ,double balance ,int pin) {
         this.accountNumber=accountNumber;
         this.accountName=accountName;
         this.balance=balance;
         this.pin=pin;
-        this.transactions=new ArrayList<>();
+      //  this.transactions=new ArrayList<>();
     }
 
     //getters
@@ -20,7 +20,7 @@ public class Account {
     public String getAccountName(){
          return accountName;
     }
-    public double getBalance()
+     public double getBalance()
     {
         return balance;
     }
@@ -31,18 +31,21 @@ public class Account {
     void setBalance(double balance) {
          this.balance = balance;
     }
-    public boolean verifyPin(int pin){
-         if(pin==this.pin){
+    /*public boolean verifyPin(int pin){
+         if(pin==this.pin) {
              return true;
-         }
-         else return false;
+         } else return false;
     }
-    public ArrayList<Transaction> getTransactions() {
+    */
+    /* public ArrayList<Transaction> getTransactions() {
          return transactions;
-    }
+    }*/
     public static void main(String[] args)
     {
 
     }
 
+    public int getPin() {
+        return pin;
+    }
 }
