@@ -63,7 +63,8 @@ public class BankApp {
                                     2.Deposit
                                     3.Withdrawal
                                     4.Check Transactions
-                                    5.Logout
+                                    5.Account to Account Transaction
+                                    6.Logout
                                     -------------------
                                     """);
                             int choice1 = sc.nextInt();
@@ -107,6 +108,18 @@ public class BankApp {
                                     }
                                     break;
                                 case 5:
+                                    System.out.println("Enter the sender Account to Transfer the money");
+                                    long Snum=sc.nextInt();
+                                    System.out.println("Enter the receiver Account to Transfer the money");
+                                    long Rnum=sc.nextInt();
+                                    System.out.println("Enter the amount to Transfer the money");
+                                    double Anum=sc.nextDouble();
+                                     System.out.println(bankService.moneyTransfer(Snum,Rnum,Anum));
+                                    System.out.println("Transfer Successfully");
+                                    break;
+
+
+                                case 6:
                                     System.out.println("Logout Successfully");
                                     LoggedIn = false;
                                     break;
